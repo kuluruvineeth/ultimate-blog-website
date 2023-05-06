@@ -7,8 +7,8 @@ import { HiChevronDown } from "react-icons/hi";
 
 const HomePage = () => {
   return (
-    <div className="flex h-screen w-full flex-col">
-      <header className="flex h-20 w-full flex-row items-center justify-around border-b-[1px] border-gray-200 bg-white">
+    <div className="flex h-full w-full flex-col">
+      <header className="flex h-32 w-full flex-row items-center justify-around border-b-[1px] border-gray-200 bg-white">
         <div>
           <IoReaderOutline className="text-2xl text-gray-600" />
         </div>
@@ -50,6 +50,7 @@ const HomePage = () => {
                 />
               </label>
               <div className="flex w-full items-center justify-end space-x-4">
+                <div>My topics:</div>
                 <div className="flex items-center space-x-2">
                   {Array.from({ length: 2 }).map((_, i) => (
                     <div
@@ -112,7 +113,6 @@ const HomePage = () => {
                   </div>
                 </div>
                 <div className="flex w-full items-center space-x-4">
-                  <div>My topics:</div>
                   <div className="flex items-center space-x-2">
                     {Array.from({ length: 2 }).map((_, i) => (
                       <div
@@ -128,7 +128,61 @@ const HomePage = () => {
             ))}
           </div>
         </main>
-        <aside className="col-span-4 h-full w-full">This is sidebar</aside>
+        <aside className="sticky top-36 col-span-4 flex h-full w-full flex-col space-y-4 p-6">
+          <div>
+            <h3 className="my-6 text-lg font-semibold">
+              People you might be interested
+            </h3>
+            <div className="flex flex-col space-y-4">
+              {Array.from({ length: 4 }).map((_, i) => (
+                <div key={i} className="flex flex-row items-center space-x-5">
+                  <div className="h-10 w-10 flex-none rounded-full bg-gray-500"></div>
+                  <div>
+                    <div className="text-sm font-bold text-gray-900">
+                      Kuluru Vineeth
+                    </div>
+                    <div className="text-xs">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Inventore, corrupti! Aspernatur tenetur nemo ab asperiores
+                    </div>
+                  </div>
+                  <div>
+                    <button className="flex items-center space-x-3 rounded border border-gray-400/50 px-4 py-1.5 transition hover:border-gray-900 hover:text-gray-900">
+                      Follow
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h3 className="my-6 text-lg font-semibold">Your reading list</h3>
+            <div className="flex flex-col space-y-4">
+              {Array.from({ length: 4 }).map((_, i) => (
+                <div key={i} className="group flex items-center space-x-6">
+                  <div className="aspect-square h-full w-2/5 rounded-xl bg-gray-300"></div>
+                  <div className="flex w-3/5 flex-col space-y-2">
+                    <div className="text-lg font-semibold decoration-indigo-900 group-hover:underline">
+                      Kuluru Vineeth Blog
+                    </div>
+                    <div>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Inventore, corrupti! Aspernatur tenetur nemo ab asperiores
+                    </div>
+                    <div className="flex w-full items-center space-x-4">
+                      <div className="h-8 w-8 rounded-full bg-gray-300"></div>
+                      <div className="text-xs font-semibold">
+                        Kuluru Vineeth &#x2022;
+                      </div>
+                      <div className="text-xs">05 May, 2023</div>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </aside>
       </section>
     </div>
   );
