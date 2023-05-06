@@ -128,7 +128,7 @@ const HomePage = () => {
             ))}
           </div>
         </main>
-        <aside className="sticky top-36 col-span-4 flex h-full w-full flex-col space-y-4 p-6">
+        <aside className="sticky top-20 col-span-4 flex h-full w-full flex-col space-y-4 p-6">
           <div>
             <h3 className="my-6 text-lg font-semibold">
               People you might be interested
