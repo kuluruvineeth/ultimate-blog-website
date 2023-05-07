@@ -12,7 +12,7 @@ import { api } from "../../utils/api";
 import Avatar from "../Avatar";
 import Tag from "../Tag";
 
-type BlogItemProps = RouterOutputs["post"]["getPosts"][number];
+type BlogItemProps = RouterOutputs["post"]["getPosts"]["posts"][number];
 
 const BlogItem = ({
   author: { name, image, username },
